@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Optiviz – AI Career Coach 🚀
 
-## Getting Started
+Optiviz is an AI-powered career coaching web application that helps students and young professionals find the right career path. Many learners struggle with questions like *"Which field should I choose?"*, *"What skills should I learn?"*, and *"How do I build a roadmap?"*. Optiviz solves this by acting as a **personal AI career mentor** that provides clear, personalized, and structured guidance.
 
-First, run the development server:
+Using Google Gemini AI, the platform analyzes a user's interests, goals, and current skills through a smart onboarding process and then generates customized career recommendations and learning roadmaps. Users can securely log in, save their progress, and revisit their guidance anytime.
 
+---
+
+## ✨ Key Features
+
+- 🤖 **AI-Powered Career Guidance** – Personalized career paths and learning suggestions using Gemini AI  
+- 🧠 **Smart Onboarding** – Understands user interests and goals before giving recommendations  
+- 🔐 **Secure Authentication** – Login and user management using Clerk  
+- 📊 **Saved User Progress** – Stores user profiles and recommendations with PostgreSQL & Prisma  
+- 🎨 **Modern Responsive UI** – Clean interface built with Tailwind CSS & ShadCN UI  
+- ⚡ **Full-Stack Performance** – Next.js App Router & Server Actions for smooth experience  
+
+---
+
+## 🌟 What Makes Optiviz Special?
+
+Unlike common career guidance websites that provide generic advice, Optiviz offers:
+
+- Personalized AI-generated career roadmaps  
+- Interactive onboarding for better recommendations  
+- Saved guidance so users can continue anytime  
+- 24/7 AI mentor experience  
+- Fast, modern full-stack web application  
+
+Optiviz doesn't just give information — it gives **direction**.
+
+---
+
+## 🎯 Why Optiviz?
+
+Many students lack proper mentorship and feel confused about career decisions. Optiviz bridges this gap by providing:
+
+- Clear career direction  
+- Step-by-step learning plans  
+- Reduced confusion and time waste  
+- Structured and goal-oriented guidance  
+
+It works like a personal career counselor — powered by AI.
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**  
+- Next.js (App Router)  
+- React  
+- Tailwind CSS  
+- ShadCN UI  
+
+**Backend:**  
+- Next.js Server Actions  
+- Prisma ORM  
+
+**Database:**  
+- PostgreSQL (Neon)  
+
+**Authentication:**  
+- Clerk  
+
+**AI Engine:**  
+- Google Gemini API  
+
+---
+
+## 📦 Steps to Clone and Run Locally
+
+### 1️⃣ Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/NikhilNayak12/Optiviz.git
+cd optiviz
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3️⃣ Setup Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file in the root and add:
 
-## Learn More
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+DATABASE_URL=your_postgresql_database_url
+GEMINI_API_KEY=your_gemini_api_key
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4️⃣ Setup Database
+```bash
+npx prisma generate
+npx prisma migrate deploy
+```
 
-## Deploy on Vercel
+### 5️⃣ Run the Project
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+App runs at: **http://localhost:3000**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🚀 Deployment
+
+Optiviz is optimized for Vercel deployment.
+
+1. Push project to GitHub
+2. Import repository in Vercel
+3. Add environment variables
+4. Click Deploy
+
+Done ✅
